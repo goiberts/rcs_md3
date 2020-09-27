@@ -1,0 +1,149 @@
+.flexed{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+
+  .flexed-column {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .container{
+    display:grid;
+    grid-template-columns: 200px auto 200px;
+    grid-template-areas: 
+      "header header header"
+      "nav nav nav"
+      "main main aside"
+      "footer footer footer";
+  }
+  
+  #header{
+    grid-area: header;
+    min-height: 200px;
+    background-image: url("https://factcity.com/wp-content/uploads/2020/05/fun-facts-about-clouds-scaled.jpg");
+  }
+  #nav{
+    grid-area: nav;
+    background: #dfd;
+  }
+  
+  #nav>ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+  }
+  
+  #nav>ul>li{
+    display:inline-block;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    margin: auto 0px;
+    text-align: center;
+    background: rgb(25, 104, 168);
+    color: rgb(34, 24, 170);
+    transition: .3s;
+  }
+  #nav>ul>li:hover{
+    background: rgb(20, 164, 221);
+    
+  }
+  #nav>ul>li>a{
+    display:inline-block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+  }
+  #aside{
+    grid-area: aside;
+    background: rgb(134, 186, 235, 0.5);
+    font-size: 3rem;
+  }
+  
+  #main{
+    grid-area: main;
+    min-height: 1100px;
+  }
+
+  #main img {
+      max-width: 80vw;
+  }
+  
+  #footer{
+    grid-area: footer;
+    height: 4rem;
+    background: #ddf;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(25, 104, 168);
+    color: white;
+    text-align: center;       
+  }
+
+ 
+
+  @media screen and (max-width: 1200px){
+    .container{
+    grid-template-areas: 
+      "header header header"
+      "nav nav nav"
+      "footer footer footer"
+      "main main main";
+    }
+    #aside{
+      display: none;
+    }
+    #nav>ul>li{
+    width: 100px;
+  }
+  }
+  html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+    border-spacing: 0;
+}
